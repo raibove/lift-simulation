@@ -1,0 +1,21 @@
+
+body{
+    background-color: #f3ecf8;
+}
+
+.floor{
+    display:flex;
+    align-items: center;
+}
+
+.floor-line{
+    width:90vw;
+    background-color: rgb(46, 2, 2);
+    height: 5px;
+}
+
+.floor-number{
+    /* color:#347900; */
+    font-size: 20px;
+    font-weight: bold;
+}
