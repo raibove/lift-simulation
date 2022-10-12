@@ -1,9 +1,38 @@
 <html>
     <head>
         <link rel="stylesheet"href="./index.css" />
+        <script>
+            function addFloor(){
+                console.log("clicked")
+                let floorContainer = document.getElementById("floor-container")
+                let floor = document.createElement("div")
+                floor.setAttribute('class','floor')
+                
+                let floorTile = document.createElement('hr')
+                floorTile.setAttribute('class','floor-line')
+
+                let floorNumber = document.createElement('p')
+                floorNumber.setAttribute('class', 'floor-number')
+                floorNumber.innerHTML = 'Floor 12'
+                floor.appendChild(floorTile)
+                floor.appendChild(floorNumber)
+                floorContainer.appendChild(floor)
+            }
+        </script>
     </head>
     <body>
         <div>
+            <div>
+                <label>Number of Floors:</label>
+                <input placeholder="Enter Number of Floors" type="number" id="number-floors"/>
+            </div>
+            <div>
+                <button id="layout" onclick="addFloor()">
+                    Generate Layout
+                </button>
+            </div>
+        </div>
+        <div id="floor-container">
             <div class="floor">
                 <hr class="floor-line"/>
                 <p class="floor-number">Floor 1</p>
