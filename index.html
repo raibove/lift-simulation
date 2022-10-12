@@ -1,63 +1,48 @@
 <html>
-    <head>
-        <link rel="stylesheet"href="./index.css" />
-        <script>
-            function addFloor(){
-               
-                
-                let floorContainer = document.getElementById("floor-container")
-                let floor = document.createElement("div")
-                floor.setAttribute('class','floor')
-                
-                let floorTile = document.createElement('hr')
-                floorTile.setAttribute('class','floor-line')
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <script>
+      function addFloor(index) {
+        let floorContainer = document.getElementById("floor-container");
+        let floor = document.createElement("div");
+        floor.setAttribute("class", "floor");
 
-                let floorNumber = document.createElement('p')
-                floorNumber.setAttribute('class', 'floor-number')
-                floorNumber.innerHTML = 'Floor 12'
-                floor.appendChild(floorTile)
-                floor.appendChild(floorNumber)
-                floorContainer.appendChild(floor)
-            }
+        let floorTile = document.createElement("hr");
+        floorTile.setAttribute("class", "floor-line");
 
-            function generateLayout(){
-                let numberOfFloors = document.getElementById('number-floors').value
+        let floorNumber = document.createElement("p");
+        floorNumber.setAttribute("class", "floor-number");
+        floorNumber.innerHTML = "Floor " + index;
+        floor.appendChild(floorTile);
+        floor.appendChild(floorNumber);
+        floorContainer.appendChild(floor);
+      }
 
-                for(let i=0; i<numberOfFloors; i++){
-                    addFloor()
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <div>
-            <div>
-                <label>Number of Floors:</label>
-                <input placeholder="Enter Number of Floors" type="number" id="number-floors"/>
-            </div>
-            <div>
-                <button id="layout" onclick="generateLayout()">
-                    Generate Layout
-                </button>
-            </div>
-        </div>
-        <div id="floor-container">
-            <div class="floor">
-                <hr class="floor-line"/>
-                <p class="floor-number">Floor 1</p>
-            </div>
-            <div class="floor">
-                <hr class="floor-line"/>
-                <p class="floor-number">Floor 1</p>
-            </div>
-            <div class="floor">
-                <hr class="floor-line"/>
-                <p class="floor-number">Floor 1</p>
-            </div>
-            <div class="floor">
-                <hr class="floor-line"/>
-                <p class="floor-number">Floor 1</p>
-            </div>
-        </div>
-    </body>
+      function generateLayout() {
+        let numberOfFloors = document.getElementById("number-floors").value;
+
+        for (let i = numberOfFloors; i > 0; i--) {
+          addFloor(i);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <div>
+        <label>Number of Floors:</label>
+        <input
+          placeholder="Enter Number of Floors"
+          type="number"
+          id="number-floors"
+        />
+      </div>
+      <div>
+        <button id="layout" onclick="generateLayout()">Generate Layout</button>
+      </div>
+    </div>
+    <div id="floor-container">
+    </div>
+  </body>
 </html>
