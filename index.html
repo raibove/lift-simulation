@@ -32,7 +32,8 @@
 
       function generateLayout() {
         let numberOfFloors = document.getElementById("number-floors").value;
-
+        let floorContainer = document.getElementById("floor-container");
+        floorContainer.innerHTML = "";
         for (let i = numberOfFloors; i > 0; i--) {
           addFloor(i);
 
