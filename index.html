@@ -10,12 +10,26 @@
         let floorTile = document.createElement("hr");
         floorTile.setAttribute("class", "floor-line");
 
-        let floorNumber = document.createElement("p");
+        let upButton = document.createElement("button");
+        upButton.setAttribute("class","upButton")
+        upButton.textContent  = "up";
+
+        let downButton = document.createElement("button");
+        downButton.setAttribute("class","downButton")
+        downButton.textContent  = "down";
+
+        let floorNumber = document.createElement("span");
         floorNumber.setAttribute("class", "floor-number");
         floorNumber.innerHTML = "Floor " + index;
         floor.appendChild(floorTile);
         floor.appendChild(floorNumber);
+        
+        floorContainer.appendChild(upButton);
+        floorContainer.appendChild(downButton);
+
         floorContainer.appendChild(floor);
+
+
       }
 
       function generateLayout() {
@@ -43,6 +57,9 @@
       </div>
     </div>
     <div id="floor-container">
+    </div>
+    <div id="lift" class="lift">
+
     </div>
   </body>
 </html>

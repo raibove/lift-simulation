@@ -6,6 +6,7 @@ body{
 .floor{
     display:flex;
     align-items: center;
+    margin-bottom: 60px;
 }
 
 .floor-line{
@@ -18,4 +19,35 @@ body{
     /* color:#347900; */
     font-size: 20px;
     font-weight: bold;
+}
+
+.lift{
+    height: 80px;
+    width: 58px;
+    background-color: gray;
+}
+
+.upButton{
+    /* padding: 10px 20px; */
+    background-color: salmon;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+    width: 50px;
+    padding: 5px 0;
+}
+
+.downButton{
+    /* padding: 10px 20px; */
+    background-color: salmon;
+    color: white;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 50px;
+    padding: 5px 0;
 }
