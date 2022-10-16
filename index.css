@@ -3,10 +3,19 @@ body{
     background-color: #f3ecf8;
 }
 
+.layout-input{
+    height: 30px;
+}
+
+.floor-container{
+    position: absolute;
+    top:30px;
+}
+
 .floor{
     display:flex;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .floor-line{
@@ -21,10 +30,17 @@ body{
     font-weight: bold;
 }
 
+.lift-contaiiner{
+    position: relative;
+}
+
 .lift{
     height: 80px;
     width: 58px;
     background-color: gray;
+    position: absolute;
+    top:30px;
+    left: 70px;
 }
 
 .upButton{
