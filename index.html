@@ -15,7 +15,7 @@
         upButton.textContent  = "up";
 
         let downButton = document.createElement("button");
-        downButton.setAttribute("class","downButton")
+        downButton.setAttribute("class","upButton")
         downButton.textContent  = "down";
 
         let floorNumber = document.createElement("span");
@@ -26,9 +26,7 @@
         
         floorContainer.appendChild(upButton);
         floorContainer.appendChild(downButton);
-
         floorContainer.appendChild(floor);
-
 
       }
 
@@ -37,7 +35,10 @@
 
         for (let i = numberOfFloors; i > 0; i--) {
           addFloor(i);
+
         }
+        let lift = document.getElementById('lift')
+        lift.style.top = (30+(2*130)).toString()+"px";
       }
     </script>
   </head>

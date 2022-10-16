@@ -53,7 +53,8 @@ body{
     display: block;
     margin: 5px 0;
     width: 50px;
-    padding: 5px 0;
+    /* padding: 5px 0; */
+    height:30px;
 }
 
 .downButton{
